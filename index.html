@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PassMidi</title>
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/dataTables.bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <div class="container">
+        <h2><center><u>PassMidi</u></center></h2><br>
+        <h4>- Proposer un resto dans le formulaire</h4>
+        <h4>- Participez en cliquant sur "edit" et rajouter votres nom dans la liste des participant</h4>
+        <br>
+        <div class="row">
+            <div class="col-md-9">
+                <table class="table table-bordered table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th width="40">ID</th>
+                            <th>Nom</th> <!-- Name -->
+                            <th>Restaurant</th> <!-- Email -->
+                            <th>Date et heure</th> <!-- Phone -->
+                            <th>Participant</th> <!-- Address -->
+                            <th width="100">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="col-md-3">
+                <form id="sidebar">
+                    <div class="form-group">
+                        <label for="id">Choisir un ID (non utilisé)*</label>
+                        <input type="number" style="border:solid 1px black; border-radius:5px; text-align:center; box-shadow:0 0 6px;" min="0" id="id" name="id" class="form-control" placeholder="Choisir un ID"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="nm">Nom*</label>
+                        <input type="text" style="border:solid 1px black; border-radius:5px; text-align:center; box-shadow:0 0 6px;" id="nm" name="nm" class="form-control" placeholder="Nom"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="em">Restaurant*</label>
+                        <input type="text" style="border:solid 1px black; border-radius:5px; text-align:center; box-shadow:0 0 6px;" id="em" name="em" class="form-control" placeholder="Restaurant"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="hp">Date et heure*</label>
+                        <input type="text" style="border:solid 1px black; border-radius:5px; text-align:center; box-shadow:0 0 6px;" id="hp" name="hp" class="form-control" placeholder="Date et heure"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="ad">Participants</label>
+                        <input type="text" style="border:solid 1px black; border-radius:5px; box-shadow:0 0 6px; height:100px;" id="ad" name="ad" class="form-control" placeholder="Participants"></input>
+                        <!-- <textarea style="border:solid 1px black; border-radius:5px; text-align:center; box-shadow:0 0 6px;" id="ad" name="ad" class="form-control" placeholder="Participants"></textarea> -->
+                    </div>
+                    <button type="button" id="save" class="btn btn-primary" onclick="saveData()">Sauvegarder</button>
+                    <button type="button" id="update" class="btn btn-warning" onclick="updateData()">Mettre à jour</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/dataTables.bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
